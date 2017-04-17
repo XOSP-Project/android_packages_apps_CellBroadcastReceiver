@@ -214,7 +214,7 @@ public class CellBroadcastSettings extends PreferenceActivity {
                 mEnableAlertsTone.setChecked(prefs.getBoolean(
                         KEY_ENABLE_ALERT_TONE, true));
             } else {
-                preferenceScreen.removePreference(findPreference(KEY_ENABLE_ALERT_TONE));
+                mAlertCategory.removePreference(findPreference(KEY_ENABLE_ALERT_TONE));
             }
 
             mDisableSevereWhenExtremeDisabled = isFeatureEnabled(getContext(),
@@ -395,7 +395,7 @@ public class CellBroadcastSettings extends PreferenceActivity {
                mPresidentialCheckBox.setChecked(true);
                mPresidentialCheckBox.setEnabled(false);
            } else {
-               preferenceScreen.removePreference(mPresidentialCheckBox);
+               mAlertCategory.removePreference(mPresidentialCheckBox);
            }
 
             if (getResources().getBoolean(
